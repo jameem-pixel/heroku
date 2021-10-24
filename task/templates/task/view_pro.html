@@ -1,0 +1,28 @@
+{% extends 'task/main.html' %}
+{% load static %}
+{% block content %}
+<div class="container">
+    <a class="btn btn-outline-dark" href="{% url 'home' %}">&#x2190;Back</a>
+    <hr>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card card-body border-info">
+
+                <div class="card-group">
+                    
+                    <div class="card">
+                        <h3><strong>{{toview.name}}</strong></h3>
+
+                        <img class="card-img-top" src="{{toview.image.url}}" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">DESCRIPTION</h5>
+                            <br>
+                            <p class="card-text">{{toview.description}}</p>
+
+                        </div>
+                </div>
+            </div>    
+        </div>    
+    </div>  
+</div>    
+{% endblock %}

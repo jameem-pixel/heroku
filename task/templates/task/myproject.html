@@ -1,0 +1,30 @@
+{% extends 'task/main.html' %}
+{% load static %}
+{% block content %}
+<div class="container">
+    <a class="btn btn-outline-dark" href="{% url 'home' %}">&#x2190;Back</a>
+    <hr>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card card-body border-info">
+                {% for i in temp %}
+
+                <div class="card-group">
+                    
+                    <div class="card">
+                        <h3><strong>{{i.name}}</strong></h3>
+
+                        <img class="card-img-top" src="{{i.image.url}}" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">DESCRIPTION</h5>
+                            <br>
+                            <p class="card-text">{{i.description}}</p>
+
+                        </div>
+                </div>
+                {% endfor %}
+            </div>    
+        </div>    
+    </div>  
+</div>    
+{% endblock %}
